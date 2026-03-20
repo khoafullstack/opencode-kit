@@ -10,6 +10,21 @@ type AgentPermission = {
   skill?: string
 }
 
+type AgentTools = {
+  write?: boolean
+  edit?: boolean
+  bash?: boolean | string | Record<string, string>
+  glob?: boolean
+  grep?: boolean
+  read?: boolean
+  webfetch?: boolean
+  patch?: boolean
+  todowrite?: boolean
+  todoread?: boolean
+  question?: boolean
+  [key: string]: unknown
+}
+
 type AgentConfig = {
   description?: string
   mode?: string
@@ -18,6 +33,7 @@ type AgentConfig = {
   prompt?: string
   color?: string
   permission?: AgentPermission
+  tools?: AgentTools
   steps?: number
   hidden?: boolean
   model?: string

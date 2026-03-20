@@ -1,5 +1,5 @@
 {
-  "name": "opencode-test-plugin",
+  "name": "opencode-agent",
   "version": "1.0.0",
   "type": "module",
   "description": "OpenCode plugin with hello-skill",

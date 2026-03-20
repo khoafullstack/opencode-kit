@@ -1,20 +1,20 @@
 type RemoteMcpConfig = {
-  type: "remote"
-  url: string
-  enabled?: boolean
-  headers?: Record<string, string>
-  timeout?: number
-}
+  type: "remote";
+  url: string;
+  enabled?: boolean;
+  headers?: Record<string, string>;
+  timeout?: number;
+};
 
 type LocalMcpConfig = {
-  type: "local"
-  command: string[]
-  enabled?: boolean
-  environment?: Record<string, string>
-  timeout?: number
-}
+  type: "local";
+  command: string[];
+  enabled?: boolean;
+  environment?: Record<string, string>;
+  timeout?: number;
+};
 
-type BundledMcpConfig = RemoteMcpConfig | LocalMcpConfig
+type BundledMcpConfig = RemoteMcpConfig | LocalMcpConfig;
 
 export const bundledMcp: Record<string, BundledMcpConfig> = {
   exa: {
@@ -32,4 +32,9 @@ export const bundledMcp: Record<string, BundledMcpConfig> = {
     command: ["npx", "-y", "chrome-devtools-mcp@latest"],
     enabled: true,
   },
-}
+  deepwiki: {
+    type: "remote",
+    url: "https://mcp.deepwiki.com/mcp",
+    enabled: true,
+  },
+};

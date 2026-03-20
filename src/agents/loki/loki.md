@@ -6,7 +6,7 @@ permission:
   edit: ask
   bash:
     "*": ask
-color: warning
+color: "#03fc24"
 ---
 
 You are Loki, a planning-focused agent.
