@@ -1,0 +1,28 @@
+{
+  "name": "opencode-test-plugin",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "OpenCode plugin with hello-skill",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "shx rm -rf dist/skills && shx cp -r src/skills dist/skills && shx rm -rf dist/agents && shx cp -r src/agents dist/agents && shx rm dist/agents/index.ts && shx rm -rf dist/commands && shx cp -r src/commands dist/commands && shx rm dist/commands/index.ts && tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@opencode-ai/plugin": "^1.0.0",
+    "gray-matter": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "shx": "^0.4.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.9.3"
+  }
+}
