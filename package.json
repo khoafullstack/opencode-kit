@@ -2,7 +2,7 @@
   "name": "opencode-agent",
   "version": "1.0.0",
   "type": "module",
-  "description": "OpenCode plugin with hello-skill",
+  "description": "This is a bundle of skills and agents for OpenCode. It includes a variety of pre-built skills and agents that can be used to create powerful applications with OpenCode.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
